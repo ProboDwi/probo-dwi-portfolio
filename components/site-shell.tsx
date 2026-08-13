@@ -9,6 +9,115 @@ const socials = {
   linkedin: "https://www.linkedin.com/in/probo-dwi-wahyudi-bb6b622a0/",
 };
 
+const rotatingRoles = ["Full Stack Developer", "Web Application Builder", "Creative Problem Solver"];
+
+export function MotionLayer() {
+  useEffect(() => {
+    const root = document.documentElement;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealItems = document.querySelectorAll<HTMLElement>("[data-reveal]");
+
+    if (reducedMotion) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8%" },
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    let frame = 0;
+    let pointerFrame = 0;
+    const updateScroll = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const maximum = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = maximum > 0 ? window.scrollY / maximum : 0;
+        root.style.setProperty("--scroll-progress", progress.toString());
+        root.style.setProperty("--hero-shift", `${Math.min(window.scrollY * 0.11, 90)}px`);
+      });
+    };
+
+    const updatePointer = (event: PointerEvent) => {
+      cancelAnimationFrame(pointerFrame);
+      const { clientX, clientY } = event;
+      pointerFrame = requestAnimationFrame(() => {
+        root.style.setProperty("--pointer-x", `${clientX}px`);
+        root.style.setProperty("--pointer-y", `${clientY}px`);
+      });
+    };
+
+    updateScroll();
+    window.addEventListener("scroll", updateScroll, { passive: true });
+    window.addEventListener("pointermove", updatePointer, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(frame);
+      cancelAnimationFrame(pointerFrame);
+      window.removeEventListener("scroll", updateScroll);
+      window.removeEventListener("pointermove", updatePointer);
+    };
+  }, []);
+
+  return (
+    <>
+      <div className="scroll-progress" aria-hidden="true" />
+      <div className="ambient-scene" aria-hidden="true">
+        <span className="ambient-orb ambient-orb-one" />
+        <span className="ambient-orb ambient-orb-two" />
+        <span className="ambient-grid" />
+      </div>
+    </>
+  );
+}
+
+export function TypingRole() {
+  const [wordIndex, setWordIndex] = useState(0);
+  const [length, setLength] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+  useEffect(() => {
+    const word = rotatingRoles[wordIndex];
+    const atEnd = length === word.length;
+    const atStart = length === 0;
+    let delay = deleting ? 42 : 76;
+
+    if (atEnd && !deleting) delay = 1500;
+    if (atStart && deleting) delay = 320;
+
+    const timeout = window.setTimeout(() => {
+      if (atEnd && !deleting) {
+        setDeleting(true);
+        return;
+      }
+      if (atStart && deleting) {
+        setDeleting(false);
+        setWordIndex((current) => (current + 1) % rotatingRoles.length);
+        return;
+      }
+      setLength((current) => current + (deleting ? -1 : 1));
+    }, delay);
+
+    return () => window.clearTimeout(timeout);
+  }, [deleting, length, wordIndex]);
+
+  return (
+    <span className="typing-role" aria-label={rotatingRoles[wordIndex]}>
+      {rotatingRoles[wordIndex].slice(0, length)}<i aria-hidden="true" />
+    </span>
+  );
+}
+
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
