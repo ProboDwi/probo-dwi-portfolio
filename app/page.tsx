@@ -3,6 +3,7 @@ import { ContactForm, Navbar } from "../components/site-shell";
 import { education } from "../data/education";
 import { experiences } from "../data/experience";
 import { projects } from "../data/projects";
+import { profile } from "../data/profile";
 import { skillGroups } from "../data/skills";
 
 const github = "https://github.com/ProboDwi";
@@ -45,12 +46,12 @@ export default function Home() {
         <section id="about" className="section container about-section">
           <SectionLabel number="02">About me</SectionLabel>
           <div className="about-copy">
-            <p className="editable-note">Personal statement to be added by Probo.</p>
-            <h2>I care about building web products that feel clear, dependable, and genuinely useful.</h2>
+            <p className="editable-note">{profile.aboutStatus}</p>
+            <h2>{profile.aboutLead}</h2>
             <div className="about-details">
-              <div><span>Location</span><p>Indonesia</p></div>
-              <div><span>Role</span><p>Full Stack Developer</p></div>
-              <div><span>Focus</span><p>Web Application Development</p></div>
+              <div><span>Location</span><p>{profile.location}</p></div>
+              <div><span>Role</span><p>{profile.role}</p></div>
+              <div><span>Focus</span><p>{profile.focus}</p></div>
             </div>
           </div>
         </section>
@@ -157,4 +158,3 @@ export default function Home() {
     </>
   );
 }
-
