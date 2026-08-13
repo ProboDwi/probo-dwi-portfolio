@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/" },
-  openGraph: { title, description, type: "website", locale: "id_ID", url: "/", siteName: "Probo Dwi Wahyudi", images: [{ url: "/og.png", width: 1200, height: 630, alt: "Probo Dwi Wahyudi — Pengembang Full Stack" }] },
-  twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+  openGraph: { title, description, type: "website", locale: "id_ID", url: "/", siteName: "Probo Dwi Wahyudi", images: [{ url: "/og-v2.png", width: 1200, height: 630, alt: "Probo Dwi Wahyudi — Pengembang Full Stack" }] },
+  twitter: { card: "summary_large_image", title, description, images: ["/og-v2.png"] },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 

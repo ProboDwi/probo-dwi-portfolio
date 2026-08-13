@@ -67,16 +67,6 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="marquee" aria-hidden="true">
-          <div className="marquee-track">
-            {[0, 1].map((copy) => (
-              <div className="marquee-copy" key={copy}>
-                <span>PENGEMBANGAN FULL STACK</span><i>✦</i><span>REKAYASA KREATIF</span><i>✦</i><span>PENGALAMAN WEB</span><i>✦</i>
-              </div>
-            ))}
-          </div>
-        </div>
-
         <section id="about" className="section container about-section" data-reveal>
           <SectionLabel number="02">Tentang saya</SectionLabel>
           <div className="about-copy">
