@@ -1,15 +1,14 @@
 import type { Experience } from "../types";
 
-// Replace the editable fields below when your internship details are ready.
+// Ganti bagian yang dapat diedit di bawah saat detail magang sudah siap.
 export const experiences: Experience[] = [
   {
     company: "PT. Tanjung Mulia Informatika",
-    role: "Intern",
-    type: "Internship",
-    period: "Period to be added",
+    role: "Peserta Magang",
+    type: "Magang",
+    period: "Periode akan ditambahkan",
     description:
-      "Experience details, responsibilities, and outcomes will be added here.",
-    technologies: ["Technologies to be added"],
+      "Detail pengalaman, tanggung jawab, dan hasil kerja akan ditambahkan di sini.",
+    technologies: ["Teknologi akan ditambahkan"],
   },
 ];
-

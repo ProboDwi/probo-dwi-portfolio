@@ -1,10 +1,9 @@
-// Replace this copy with your own story when it is ready.
+// Ganti teks ini dengan cerita Anda sendiri saat sudah siap.
 export const profile = {
-  aboutStatus: "Personal statement to be added by Probo.",
+  aboutStatus: "Bagian ini akan saya lengkapi sendiri.",
   aboutLead:
-    "I care about building web products that feel clear, dependable, and genuinely useful.",
+    "Cerita tentang perjalanan, minat, dan cara saya membangun produk digital akan segera hadir.",
   location: "Indonesia",
-  role: "Full Stack Developer",
-  focus: "Web Application Development",
+  role: "Pengembang Full Stack",
+  focus: "Pengembangan Aplikasi Web",
 };
-

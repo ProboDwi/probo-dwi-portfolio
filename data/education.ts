@@ -4,7 +4,6 @@ export const education = [
     institution: "Politeknik Negeri Cilacap",
     degree: "D3 Teknik Informatika",
     description:
-      "Focused on practical software development, information systems, and building dependable web applications.",
+      "Berfokus pada pengembangan perangkat lunak praktis, sistem informasi, dan pembangunan aplikasi web yang andal.",
   },
 ];
-

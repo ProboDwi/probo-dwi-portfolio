@@ -11,21 +11,21 @@ export async function POST(request: Request) {
     const message = typeof body.message === "string" ? body.message.trim() : "";
 
     if (!name || name.length > 100 || !/^\S+@\S+\.\S+$/.test(email) || email.length > 200 || !subject || subject.length > 160 || message.length < 10 || message.length > 5000) {
-      return Response.json({ error: "Invalid form data." }, { status: 400 });
+      return Response.json({ error: "Data formulir tidak valid." }, { status: 400 });
     }
 
     const endpoint = process.env.CONTACT_FORM_ENDPOINT;
-    if (!endpoint) return Response.json({ error: "Contact delivery is not configured." }, { status: 503 });
+    if (!endpoint) return Response.json({ error: "Pengiriman pesan belum dikonfigurasi." }, { status: 503 });
 
     const forwarded = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, subject, message, contactEmail: process.env.CONTACT_EMAIL }),
     });
-    if (!forwarded.ok) throw new Error("Contact provider rejected the message");
+    if (!forwarded.ok) throw new Error("Penyedia layanan kontak menolak pesan");
 
     return Response.json({ ok: true });
   } catch {
-    return Response.json({ error: "Unable to send message." }, { status: 500 });
+    return Response.json({ error: "Pesan tidak dapat dikirim." }, { status: 500 });
   }
 }
