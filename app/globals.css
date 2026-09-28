@@ -148,6 +148,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .experience-period span { display: block; margin-top: 10px; color: var(--orange); }
 .experience-main h3 { margin: 0; font-size: clamp(30px,3vw,46px); font-weight: 540; letter-spacing: -.045em; }
 .company { margin: 7px 0 36px; font-size: 15px; }
+.experience-main .editable-note { margin: 0; color: inherit; font-family: inherit; font-size: 15px; line-height: 1.75; letter-spacing: 0; opacity: .76; }
 .experience-main .editable-note { max-width: 460px; color: inherit; opacity: .55; line-height: 1.6; }
 .technology-line { margin: 4px 0 0; font-family: var(--font-geist-mono); font-size: 9px; line-height: 1.9; letter-spacing: .05em; text-transform: uppercase; }
 

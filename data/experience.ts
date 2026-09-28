@@ -4,7 +4,7 @@ import type { Experience } from "../types";
 export const experiences: Experience[] = [
   {
     company: "PT. Tanjung Mulia Informatika",
-    role: "Peserta Magang",
+    role: "Magang Industri",
     type: "Magang",
     period: "Agustus 2025 - Desember 2025",
     description:
