@@ -70,7 +70,6 @@ export default function Home() {
         <section id="about" className="section container about-section" data-reveal>
           <SectionLabel number="02">Tentang saya</SectionLabel>
           <div className="about-copy">
-            <p className="editable-note">{profile.aboutStatus}</p>
             <h2>{profile.aboutLead}</h2>
             {/* <p className="about-body">Saya akan menambahkan deskripsi lengkap tentang diri saya di bagian ini.</p> */}
             <div className="about-details">
