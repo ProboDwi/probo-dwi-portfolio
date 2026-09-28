@@ -121,7 +121,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .about-section .section-label { align-self: start; }
 .about-section .section-label::after { display: none; }
 .about-copy { position: relative; z-index: 1; }
-.about-copy h2 { max-width: 900px; margin: 0; font-size: clamp(36px, 4.7vw, 66px); line-height: 1.05; letter-spacing: -.052em; font-weight: 530; }
+.about-copy h2 { max-width: 900px; margin: 0; font-size: clamp(32px, 3.7vw, 52px); line-height: 1.08; letter-spacing: -.052em; font-weight: 530; }
 .editable-note { margin: 0 0 24px; color: var(--orange); font-family: var(--font-geist-mono); font-size: 10px; letter-spacing: .05em; }
 .about-body { max-width: 650px; margin: 38px 0 0 auto; font-size: 17px; line-height: 1.75; opacity: .72; }
 .about-details { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 75px; border-top: 1px solid var(--line); }
@@ -292,7 +292,7 @@ footer { padding-block: 64px 30px; background: linear-gradient(110deg, #061722, 
   .hero-signature > span { display: none; }
   .section-label { margin-bottom: 52px; }
   .section-label::after { margin-left: 8px; }
-  .about-copy h2 { font-size: 37px; }
+  .about-copy h2 { font-size: 30px; }
   .about-body { margin-top: 30px; font-size: 15px; }
   .about-details { grid-template-columns: 1fr; margin-top: 52px; }
   .about-details > div, .about-details > div + div { padding: 16px 0 18px; border-right: 0; border-bottom: 1px solid var(--line); }

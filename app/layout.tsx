@@ -5,15 +5,15 @@ import "./globals.css";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"], display: "swap" });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"], display: "swap" });
 
-const title = "Probo Dwi Wahyudi — Pengembang Full Stack";
-const description = "Portofolio Probo Dwi Wahyudi, pengembang Full Stack yang berfokus membangun aplikasi web modern dan andal.";
+const title = "Probo Dwi Wahyudi — Web Developer";
+const description = "Portofolio Probo Dwi Wahyudi, web developer yang berfokus membangun aplikasi web modern dan andal.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://probodwi.my.id"),
   title,
   description,
   alternates: { canonical: "/" },
-  openGraph: { title, description, type: "website", locale: "id_ID", url: "/", siteName: "Probo Dwi Wahyudi", images: [{ url: "/og-v2.png", width: 1200, height: 630, alt: "Probo Dwi Wahyudi — Pengembang Full Stack" }] },
+  openGraph: { title, description, type: "website", locale: "id_ID", url: "/", siteName: "Probo Dwi Wahyudi", images: [{ url: "/og-v2.png", width: 1200, height: 630, alt: "Probo Dwi Wahyudi — Web Developer " }] },
   twitter: { card: "summary_large_image", title, description, images: ["/og-v2.png"] },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };

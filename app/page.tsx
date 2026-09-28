@@ -7,7 +7,7 @@ import { profile } from "../data/profile";
 import { skillGroups } from "../data/skills";
 
 const github = "https://github.com/ProboDwi";
-const linkedin = "https://www.linkedin.com/in/probo-dwi-wahyudi-bb6b622a0/";
+const linkedin = "https://www.linkedin.com/in/probodwiwahyudi";
 
 function SectionLabel({ number, children }: { number: string; children: React.ReactNode }) {
   return <div className="section-label"><span>{number}</span><p>{children}</p></div>;
@@ -23,15 +23,15 @@ export default function Home() {
           <div className="container hero-inner">
             <div className="hero-kicker reveal reveal-1">
               <span><i className="status-dot" />Siap untuk kesempatan baru</span>
-              <span>01 / PORTOFOLIO / 2026</span>
+              {/* <span>01 / PORTOFOLIO / 2026</span> */}
             </div>
 
             <div className="hero-stage">
               <div className="hero-copy">
                 <p className="hero-overline reveal reveal-1">Halo, saya Probo</p>
                 <h1 className="reveal reveal-2">
-                  <span>PENGEMBANG</span>
-                  <span className="outlined">FULL STACK.</span>
+                  <span>WEB</span>
+                  <span className="outlined">DEVELOPER.</span>
                 </h1>
                 <div className="role-window reveal reveal-3"><TypingRole /></div>
                 <p className="hero-description reveal reveal-3">Saya mengubah ide menjadi produk web yang andal, intuitif, dan mudah dikembangkan—mulai dari antarmuka yang menarik hingga sistem di baliknya.</p>
@@ -50,12 +50,12 @@ export default function Home() {
                 <div className="portrait-frame">
                   <Image src="/images/probo-dwi-wahyudi.webp" alt="Probo Dwi Wahyudi mengenakan setelan formal berwarna hitam" fill sizes="(max-width: 700px) 82vw, 42vw" priority />
                 </div>
-                <div className="portrait-label portrait-label-top"><span>Berdomisili di</span><strong>Indonesia</strong></div>
-                <div className="portrait-label portrait-label-bottom"><span>Berfokus pada</span><strong>Aplikasi web modern</strong></div>
-                <div className="floating-code" aria-hidden="true">
+                {/* <div className="portrait-label portrait-label-top"><span>Berdomisili di</span><strong>Indonesia</strong></div> */}
+                {/* <div className="portrait-label portrait-label-bottom"><span>Berfokus pada</span><strong>Aplikasi web modern</strong></div> */}
+                {/* <div className="floating-code" aria-hidden="true">
                   <span>PROBO.DEV</span>
                   <code>{`{ rancang → ulangi → rilis }`}</code>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -72,7 +72,7 @@ export default function Home() {
           <div className="about-copy">
             <p className="editable-note">{profile.aboutStatus}</p>
             <h2>{profile.aboutLead}</h2>
-            <p className="about-body">Saya akan menambahkan deskripsi lengkap tentang diri saya di bagian ini.</p>
+            {/* <p className="about-body">Saya akan menambahkan deskripsi lengkap tentang diri saya di bagian ini.</p> */}
             <div className="about-details">
               <div><span>Lokasi</span><p>{profile.location}</p></div>
               <div><span>Peran</span><p>{profile.role}</p></div>
@@ -161,7 +161,7 @@ export default function Home() {
             <div className="contact-grid" data-reveal>
               <div className="contact-intro">
                 <h2>MARI BUAT<br />SESUATU<br /><span>BERSAMA.</span></h2>
-                <p>Punya proyek, peluang, atau sekadar ingin berbincang tentang pengembangan perangkat lunak? Silakan hubungi saya.</p>
+                <p>Informasi lebih lanjut Silakan hubungi saya.</p>
                 <div className="contact-socials">
                   <a href={github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
                   <a href={linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
@@ -175,7 +175,7 @@ export default function Home() {
 
       <footer>
         <div className="container footer-top">
-          <div><a className="logo footer-logo" href="#home">PROBO<span>.</span></a><p>Pengembang Full Stack<br />Indonesia</p></div>
+          <div><a className="logo footer-logo" href="#home">PROBO<span>.</span></a><p>Web Developer<br />Indonesia</p></div>
           <div className="footer-links"><a href={github} target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href={linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
           <a className="back-top" href="#home">Kembali ke atas ↑</a>
         </div>
