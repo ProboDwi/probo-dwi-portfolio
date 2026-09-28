@@ -186,7 +186,15 @@ export function Navbar() {
         >
           {open ? "Tutup" : "Menu"}
         </button>
-        <span className="cv-unavailable" title="Berkas CV belum ditambahkan">CV segera</span>
+        <a
+          className="cv-link"
+          href="/CV%20-%20Probo%20Dwi.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Buka CV Probo Dwi"
+        >
+          CV
+        </a>
       </nav>
 
       <div id="mobile-menu" className={`mobile-menu ${open ? "is-open" : ""}`} aria-hidden={!open}>
@@ -201,7 +209,9 @@ export function Navbar() {
           <div className="mobile-socials">
             <a href={socials.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             <a href={socials.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <span>CV akan tersedia setelah berkasnya ditambahkan.</span>
+            <a href="/CV%20-%20Probo%20Dwi.pdf" target="_blank" rel="noopener noreferrer">
+              Buka CV ↗
+            </a>
           </div>
         </div>
       </div>
