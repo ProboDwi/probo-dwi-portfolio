@@ -13,10 +13,10 @@ const links = [
 
 const socials = {
   github: "https://github.com/ProboDwi",
-  linkedin: "https://www.linkedin.com/in/probo-dwi-wahyudi-bb6b622a0/",
+  linkedin: "https://www.linkedin.com/in/probodwiwahyudi",
 };
 
-const rotatingRoles = ["Pengembang Full Stack", "Pembuat Aplikasi Web", "Pemecah Masalah Kreatif"];
+const rotatingRoles = ["Full Stack Developer", "Web Developer", "Troubleshooting"];
 
 export function MotionLayer() {
   useEffect(() => {
