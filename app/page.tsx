@@ -70,7 +70,7 @@ export default function Home() {
         <section id="about" className="section container about-section" data-reveal>
           <SectionLabel number="02">Tentang saya</SectionLabel>
           <div className="about-copy">
-            <h2>{profile.aboutLead}</h2>
+            <p className="about-lead">{profile.aboutLead}</p>
             {/* <p className="about-body">Saya akan menambahkan deskripsi lengkap tentang diri saya di bagian ini.</p> */}
             <div className="about-details">
               <div><span>Lokasi</span><p>{profile.location}</p></div>
@@ -175,7 +175,12 @@ export default function Home() {
       <footer>
         <div className="container footer-top">
           <div><a className="logo footer-logo" href="#home">PROBO<span>.</span></a><p>Web Developer<br />Indonesia</p></div>
-          <div className="footer-links"><a href={github} target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href={linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+          <div className="footer-links">
+            <a href={github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href={linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="mailto:bisujoho222@gmail.com">bisujoho222@gmail.com</a>
+            <a href="https://instagram.com/pdwhyd_" target="_blank" rel="noopener noreferrer">@pdwhyd_ ↗</a>
+          </div>
           <a className="back-top" href="#home">Kembali ke atas ↑</a>
         </div>
         <div className="container footer-bottom"><span>© 2026 Probo Dwi Wahyudi</span><span>Dirancang & dibangun dengan sepenuh hati.</span></div>
