@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";
+import { profile } from "../data/profile";
 
 const links = [
   { label: "Tentang", id: "about" },
@@ -225,7 +226,7 @@ const emptyFields: Fields = { name: "", email: "", subject: "", message: "" };
 export function ContactForm() {
   const [fields, setFields] = useState(emptyFields);
   const [errors, setErrors] = useState<Partial<Fields>>({});
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error" | "email">("idle");
 
   const validate = () => {
     const next: Partial<Fields> = {};
@@ -247,6 +248,10 @@ export function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...fields, website: "" }),
       });
+      if (response.status === 503) {
+        setStatus("email");
+        return;
+      }
       if (!response.ok) throw new Error("Permintaan gagal");
       setFields(emptyFields);
       setErrors({});
@@ -261,6 +266,7 @@ export function ContactForm() {
     if (errors[key]) setErrors({ ...errors, [key]: undefined });
     if (status !== "idle") setStatus("idle");
   };
+  const emailHref = `mailto:${profile.email}?subject=${encodeURIComponent(fields.subject)}&body=${encodeURIComponent(`Nama: ${fields.name}\nEmail: ${fields.email}\n\n${fields.message}`)}`;
 
   return (
     <form className="contact-form" onSubmit={submit} noValidate>
@@ -278,6 +284,7 @@ export function ContactForm() {
         <button type="submit" disabled={status === "loading"}>{status === "loading" ? "Mengirim…" : "Kirim pesan"}<span>↗</span></button>
         <div className="form-status" aria-live="polite">
           {status === "success" ? "Pesan terkirim. Saya akan segera menghubungi Anda." : null}
+          {status === "email" ? <>Pengiriman otomatis belum tersedia. <a href={emailHref}>Kirim melalui email ↗</a></> : null}
           {status === "error" ? "Terjadi kesalahan. Silakan coba lagi atau hubungi saya melalui LinkedIn." : null}
         </div>
       </div>

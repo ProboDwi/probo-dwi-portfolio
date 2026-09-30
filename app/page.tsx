@@ -73,7 +73,11 @@ export default function Home() {
             <p className="about-lead">{profile.aboutLead}</p>
             {/* <p className="about-body">Saya akan menambahkan deskripsi lengkap tentang diri saya di bagian ini.</p> */}
             <div className="about-details">
-              <div><span>Lokasi</span><p>{profile.location}</p></div>
+              <div><span>Nama lengkap</span><p>{profile.fullName}</p></div>
+              <div><span>Kota</span><p>{profile.city}</p></div>
+              <div><span>Tanggal lahir</span><p>{profile.birthDate}</p></div>
+              <div><span>No. tlp</span><p>{profile.phone}</p></div>
+              <div><span>Email</span><p>{profile.email}</p></div>
               <div><span>Peran</span><p>{profile.role}</p></div>
               <div><span>Fokus</span><p>{profile.focus}</p></div>
             </div>
@@ -99,20 +103,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="experience" className="section container">
-          <div data-reveal><SectionLabel number="04">Pengalaman</SectionLabel></div>
-          <div className="experience-list">
-            {experiences.map((item) => (
-              <article className="experience-item" key={item.company} data-reveal>
-                <div className="experience-period">{item.period}<span>{item.type}</span></div>
-                <div className="experience-main">
-                  <h3>{item.role}</h3>
-                  <p className="company">{item.company}</p>
-                  <p className="editable-note">{item.description}</p>
-                </div>
-                <p className="technology-line">{item.technologies.join(" / ")}</p>
-              </article>
-            ))}
+        <section id="experience" className="section experience-section">
+          <div className="container">
+            <div data-reveal><SectionLabel number="04">Pengalaman</SectionLabel></div>
+            <div className="experience-list">
+              {experiences.map((item) => (
+                <article className="experience-item" key={item.company} data-reveal>
+                  <div className="experience-period">{item.period}<span>{item.type}</span></div>
+                  <div className="experience-main">
+                    <h3>{item.role}</h3>
+                    <p className="company">{item.company}</p>
+                    <p className="editable-note">{item.description}</p>
+                  </div>
+                  <p className="technology-line">{item.technologies.join(" / ")}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
