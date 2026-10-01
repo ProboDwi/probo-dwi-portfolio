@@ -189,10 +189,10 @@ export function Navbar() {
         </button>
         <a
           className="cv-link"
-          href="/CV%20-%20Probo%20Dwi.pdf"
+          href="/CV%20-%20Probo%20Dwi%20Wahyudii.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Buka CV Probo Dwi"
+          aria-label="Buka CV Probo Dwi Wahyudii"
         >
           CV
         </a>
@@ -210,7 +210,7 @@ export function Navbar() {
           <div className="mobile-socials">
             <a href={socials.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             <a href={socials.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <a href="/CV%20-%20Probo%20Dwi.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/CV%20-%20Probo%20Dwi%20Wahyudii.pdf" target="_blank" rel="noopener noreferrer">
               Buka CV ↗
             </a>
           </div>
