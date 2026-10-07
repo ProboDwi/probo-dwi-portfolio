@@ -6,7 +6,7 @@ export const profile = {
   city: "Cilacap",
   birthDate: "13 April 2005",
   phone: "085784219041",
-  email: "bisujoho222@gmail.com",
+  email: "probodwi20@gmail.com",
   role: "Full Stack Developer",
   focus: "Web Developer",
 };

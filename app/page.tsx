@@ -184,7 +184,7 @@ export default function Home() {
           <div className="footer-links">
             <a href={github} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             <a href={linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <a href="mailto:bisujoho222@gmail.com">bisujoho222@gmail.com</a>
+            <a href="mailto:probodwi20@gmail.com">probodwi20@gmail.com</a>
             <a href="https://instagram.com/pdwhyd_" target="_blank" rel="noopener noreferrer">@pdwhyd_ ↗</a>
           </div>
           <a className="back-top" href="#home">Kembali ke atas ↑</a>
