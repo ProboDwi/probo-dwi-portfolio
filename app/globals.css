@@ -143,6 +143,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .timeline h3 { margin: 0; font-size: clamp(28px,3vw,44px); line-height: 1; font-weight: 570; letter-spacing: -.045em; }
 .timeline-role { margin: 10px 0 24px; color: var(--orange); }
 .timeline-description { max-width: 610px; margin: 0; line-height: 1.7; opacity: .72; }
+.certificate-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.certificate-card { display: flex; min-height: 210px; flex-direction: column; align-items: flex-start; padding-top: 18px; border-top: 1px solid var(--teal); }
+.certificate-index { margin: 0 0 30px; color: var(--orange); font-family: var(--font-geist-mono); font-size: 10px; letter-spacing: .08em; }
+.certificate-card h3 { margin: 0 0 30px; font-size: clamp(24px, 2.5vw, 34px); font-weight: 570; letter-spacing: -.04em; }
+.certificate-card a { display: flex; gap: 10px; align-items: center; margin-top: auto; font-size: 13px; transition: color 200ms, transform 200ms; }
+.certificate-card a span { color: var(--orange); }
+.certificate-card a:hover { color: var(--orange); transform: translateX(5px); }
 .experience-list { border-top: 1px solid var(--teal); }
 .experience-item { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 32px; padding-block: 42px; border-bottom: 1px solid var(--line); transition: padding 300ms, background 300ms; }
 .experience-item:hover { padding-inline: 22px; background: rgba(164,95,26,.055); }
@@ -269,6 +276,7 @@ footer { padding-block: 64px 30px; background: linear-gradient(110deg, #061722, 
   .about-section, .skills-section { grid-template-columns: 1fr; gap: 0; }
   .about-section .section-label::after, .skills-section .section-label::after { display: block; }
   .timeline { margin-left: 6px; }
+  .certificate-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .experience-item { grid-template-columns: .7fr 1.5fr; }
   .experience-item > .technology-line { grid-column: 2; }
   .project, .project-reverse { grid-template-columns: 1fr; }
@@ -304,6 +312,8 @@ footer { padding-block: 64px 30px; background: linear-gradient(110deg, #061722, 
   .about-details p { margin-top: 10px; }
   .timeline-item { grid-template-columns: 1fr; gap: 15px; padding-left: 28px; }
   .timeline h3 { font-size: 29px; }
+  .certificate-list { grid-template-columns: 1fr; gap: 38px; }
+  .certificate-card { min-height: 170px; }
   .experience-item { grid-template-columns: 1fr; gap: 24px; }
   .experience-item:hover { padding-inline: 10px; }
   .experience-item > .technology-line { grid-column: auto; }

@@ -6,6 +6,7 @@ import { profile } from "../data/profile";
 const links = [
   { label: "Tentang", id: "about" },
   { label: "Pendidikan", id: "education" },
+  { label: "Sertifikat", id: "certificates" },
   { label: "Pengalaman", id: "experience" },
   { label: "Proyek", id: "projects" },
   { label: "Keahlian", id: "skills" },

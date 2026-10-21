@@ -8,6 +8,11 @@ import { skillGroups } from "../data/skills";
 
 const github = "https://github.com/ProboDwi";
 const linkedin = "https://www.linkedin.com/in/probodwiwahyudi";
+const certificates = [
+  { title: "Sertifikat Magang", file: "Sertifikat Magang.pdf" },
+  { title: "Junior Web Developer", file: "Sertifikat junior web developer.pdf" },
+  { title: "Junior Mobile Programmer", file: "sertifikat pelatihan junior mobile programmer.pdf" },
+];
 
 function SectionLabel({ number, children }: { number: string; children: React.ReactNode }) {
   return <div className="section-label"><span>{number}</span><p>{children}</p></div>;
@@ -103,9 +108,24 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="certificates" className="section container certificates-section">
+          <div data-reveal><SectionLabel number="04">Sertifikat</SectionLabel></div>
+          <div className="certificate-list">
+            {certificates.map((certificate, index) => (
+              <article className="certificate-card" key={certificate.file} data-reveal>
+                <p className="certificate-index">0{index + 1} / PDF</p>
+                <h3>{certificate.title}</h3>
+                <a href={`/${encodeURIComponent(certificate.file)}`} target="_blank" rel="noopener noreferrer">
+                  Lihat sertifikat <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section id="experience" className="section experience-section">
           <div className="container">
-            <div data-reveal><SectionLabel number="04">Pengalaman</SectionLabel></div>
+            <div data-reveal><SectionLabel number="05">Pengalaman</SectionLabel></div>
             <div className="experience-list">
               {experiences.map((item) => (
                 <article className="experience-item" key={item.company} data-reveal>
@@ -124,7 +144,7 @@ export default function Home() {
 
         <section id="projects" className="section projects-section">
           <div className="container">
-            <div data-reveal><SectionLabel number="05">Proyek pilihan</SectionLabel></div>
+            <div data-reveal><SectionLabel number="06">Proyek pilihan</SectionLabel></div>
             <div className="project-list">
               {projects.map((project, index) => (
                 <article className={`project ${index % 2 ? "project-reverse" : ""}`} key={project.id} data-reveal>
@@ -149,7 +169,7 @@ export default function Home() {
         </section>
 
         <section id="skills" className="section container skills-section" data-reveal>
-          <SectionLabel number="06">Keahlian & teknologi</SectionLabel>
+          <SectionLabel number="07">Keahlian & teknologi</SectionLabel>
           <div className="skills-grid">
             {skillGroups.map((group, index) => (
               <article className="skill-group" key={group.title} data-reveal>
@@ -162,7 +182,7 @@ export default function Home() {
 
         <section id="contact" className="contact-section">
           <div className="container">
-            <div data-reveal><SectionLabel number="07">Hubungi saya</SectionLabel></div>
+            <div data-reveal><SectionLabel number="08">Hubungi saya</SectionLabel></div>
             <div className="contact-grid" data-reveal>
               <div className="contact-intro">
                 <h2>MARI BUAT<br />SESUATU<br /><span>BERSAMA.</span></h2>
