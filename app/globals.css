@@ -142,7 +142,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .timeline-period, .experience-period { margin: 3px 0 0; font-family: var(--font-geist-mono); font-size: 11px; }
 .timeline h3 { margin: 0; font-size: clamp(28px,3vw,44px); line-height: 1; font-weight: 570; letter-spacing: -.045em; }
 .timeline-role { margin: 10px 0 24px; color: var(--orange); }
-.timeline-description { max-width: 610px; margin: 0; line-height: 1.7; opacity: .72; }
+.timeline-description { max-width: 610px; margin: 0; line-height: 1.7; opacity: .72; text-align: justify; text-align-last: left; }
 .certificate-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
 .certificate-card { display: flex; min-height: 210px; flex-direction: column; align-items: flex-start; padding-top: 18px; border-top: 1px solid var(--teal); }
 .certificate-index { margin: 0 0 30px; color: var(--orange); font-family: var(--font-geist-mono); font-size: 10px; letter-spacing: .08em; }
@@ -157,7 +157,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .experience-main h3 { margin: 0; font-size: clamp(30px,3vw,46px); font-weight: 540; letter-spacing: -.045em; }
 .company { margin: 7px 0 36px; font-size: 15px; }
 .experience-main .editable-note { margin: 0; color: inherit; font-family: inherit; font-size: 15px; line-height: 1.75; letter-spacing: 0; opacity: .76; }
-.experience-main .editable-note { max-width: 460px; color: inherit; opacity: .55; line-height: 1.6; }
+.experience-main .editable-note { max-width: 460px; color: inherit; opacity: .55; line-height: 1.6; text-align: justify; text-align-last: left; }
 .technology-line { margin: 4px 0 0; font-family: var(--font-geist-mono); font-size: 9px; line-height: 1.9; letter-spacing: .05em; text-transform: uppercase; }
 
 .projects-section { color: var(--ivory); background-color: var(--teal); background-image: radial-gradient(700px circle at var(--pointer-x) var(--pointer-y), rgba(229,99,61,.24), transparent 58%), radial-gradient(circle at 12% 85%, rgba(85,184,191,.26), transparent 30%), radial-gradient(circle at 92% 12%, rgba(104,87,199,.28), transparent 28%), linear-gradient(135deg, #092631, #123f4b 52%, #17243f), linear-gradient(rgba(241,236,233,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(241,236,233,.04) 1px, transparent 1px); background-size: auto, auto, auto, auto, 55px 55px, 55px 55px; }
@@ -181,7 +181,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .project-number span { color: var(--ivory); opacity: .58; }
 .project-info h3 { margin: 0; font-size: clamp(46px,5.6vw,78px); font-weight: 540; letter-spacing: -.06em; transition: color 250ms, transform 250ms; }
 .project:hover .project-info h3 { color: #e4a260; transform: translateX(7px); }
-.project-description { max-width: 500px; margin: 24px 0; font-size: 16px; line-height: 1.7; opacity: .76; }
+.project-description { max-width: 500px; margin: 24px 0; font-size: 16px; line-height: 1.7; opacity: .76; text-align: justify; text-align-last: left; }
 .project-info .technology-line { color: #dca16b; }
 .project-links { display: flex; gap: 24px; margin-top: 42px; }
 .project-links a { padding-bottom: 5px; border-bottom: 1px solid rgba(241,236,233,.4); font-size: 13px; transition: color 200ms, border-color 200ms, transform 200ms; }
