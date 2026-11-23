@@ -3,6 +3,17 @@ import type { Project } from "../types";
 // Tambahkan proyek baru di sini. Tampilan akan diperbarui secara otomatis.
 export const projects: Project[] = [
   {
+    id: "si-ami-pnc",
+    title: "SIAMI PNC",
+    eyebrow: "Sistem Audit Mutu Internal",
+    description:
+      "Sistem Audit Mutu Internal Politeknik Negeri Cilacap—platform digital untuk mengelola proses audit mutu secara terstruktur, transparan, dan efisien di lingkungan kampus.",
+    image: "/projects/si-ami-pnc.webp",
+    technologies: ["Laravel", "PHP", "MySQL", "Bootstrap"],
+    github: "https://github.com/ProboDwi",
+    demo: "https://si-ami-pnc-production.up.railway.app/",
+  },
+  {
     id: "keylane",
     title: "Keylane",
     eyebrow: "Permainan mengetik multipemain",
