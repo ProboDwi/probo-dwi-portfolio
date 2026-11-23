@@ -84,7 +84,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-visual { position: relative; width: min(100%, 520px); aspect-ratio: .88; justify-self: end; transform: translateY(calc(var(--hero-shift) * .2)); }
 .portrait-frame { position: absolute; inset: 6% 6% 3%; overflow: hidden; border: 1px solid rgba(255,255,255,.32); border-radius: 48% 48% 30% 30% / 34% 34% 17% 17%; background: linear-gradient(160deg, #d6e7e8, #ddd8ee); box-shadow: 0 32px 80px rgba(0,0,0,.34), 0 0 80px rgba(85,184,191,.18); animation: portrait-float 5.5s ease-in-out infinite; }
 .portrait-frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(145deg, rgba(255,255,255,.28), transparent 42%, rgba(31,68,76,.08)); pointer-events: none; }
-.portrait-frame img { object-fit: cover; object-position: center; transform: scale(1.045); transition: transform 700ms cubic-bezier(.2,.8,.2,1), filter 500ms; }
+.portrait-frame img { object-fit: cover; object-position: center 15%; transform: scale(1.045); transition: transform 700ms cubic-bezier(.2,.8,.2,1), filter 500ms; }
 .hero-visual:hover .portrait-frame img { transform: scale(1.09); filter: saturate(1.06) contrast(1.02); }
 .portrait-orbit { position: absolute; inset: 0; border: 1px solid rgba(255,194,118,.58); border-radius: 50%; animation: orbit-spin 18s linear infinite; }
 .portrait-orbit::before, .portrait-orbit::after { content: ""; position: absolute; inset: 7%; border: 1px dashed rgba(31,68,76,.2); border-radius: 50%; }
